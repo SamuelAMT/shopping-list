@@ -54,6 +54,10 @@ button:hover {
     cursor: pointer;
 }
 
+.container-section{
+    justify-content: center;
+}
+
 .list-background {
     max-width: 65%;
     background-color: rgba(252, 153, 20, 0.55);
@@ -62,6 +66,7 @@ button:hover {
     -moz-box-shadow: 4px 6px 23px -2px rgba(124, 94, 55, 0.63);
     box-shadow: 4px 6px 23px -2px rgba(124, 94, 55, 0.555);
     opacity: .7;
+    justify-content: center;
 }
 
 ul li {
@@ -100,6 +105,7 @@ li {
 
 .items-container{
     padding: 5px 3px 5px 5px;
+    min-height: 40px;
 }
 
 .li-wrapper {
@@ -183,6 +189,7 @@ li {
     width: 1rem;
     height: 1rem;
     cursor: pointer;
+    margin-left: 5px;
 }
 
 .edit-icon {
@@ -190,4 +197,5 @@ li {
     width: 1rem;
     height: 1rem;
     cursor: pointer;
+    margin-right: 5px;
 }
