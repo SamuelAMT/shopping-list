@@ -1,2 +1,2 @@
-# Shopping List
-Shopping list sketchup using plain JS
+# shoppingList
+simple shoppinglist with plain javascript

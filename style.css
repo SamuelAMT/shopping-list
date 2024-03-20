@@ -1,0 +1,193 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('background-shoppingList.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+header {
+    font-family: 'Pacifico', cursive;
+    font-size: 2em;
+}
+
+.wrapper {
+    max-width: 980px;
+    margin: 0 auto;
+    text-align: center;
+    justify-content: center;
+}
+
+section {
+    max-width: 65%;
+    padding-top: 15px;
+    justify-content: center;
+    text-align: left;
+    margin: 0 auto;
+    padding-left: 25%;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+}
+
+input {
+    padding: 10px 20px 10px 20px;
+    border-radius: 5px;
+    border: none;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    padding: 10px 20px 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: rgba(252, 153, 20, 0.8);
+    border-radius: 5px;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.list-background {
+    max-width: 65%;
+    background-color: rgba(252, 153, 20, 0.55);
+    border-radius: 5px;
+    -webkit-box-shadow: 4px 6px 23px -2px rgba(124, 94, 55, 0.555);
+    -moz-box-shadow: 4px 6px 23px -2px rgba(124, 94, 55, 0.63);
+    box-shadow: 4px 6px 23px -2px rgba(124, 94, 55, 0.555);
+    opacity: .7;
+}
+
+ul li {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.done {
+    text-decoration: line-through;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tools-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+}
+
+.features-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    gap: 10px;
+}
+
+.items-div {
+    display: flex;
+}
+
+.items-container{
+    padding: 5px 3px 5px 5px;
+}
+
+.li-wrapper {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 5px;
+}
+
+.search-container{
+	display: flex;
+	line-height: 28px;
+	align-items: center;
+	position: relative;
+	max-width: 190px;
+}
+   
+.search-input {
+	width: 100%;
+	height: 40px;
+	line-height: 28px;
+	padding: 0 1rem;
+	padding-left: 2.5rem;
+	border: 2px solid transparent;
+	border-radius: 8px;
+	outline: none;
+	background-color: #f3f3f4;
+	color: #0d0c22;
+	transition: .3s ease;
+}
+   
+.search-input::placeholder {
+	color: #9e9ea7;
+}
+   
+.search-icon {
+	position: absolute;
+	left: 1rem;
+	fill: #9e9ea7;
+	width: 1rem;
+	height: 1rem;
+}
+
+.history-container{
+	display: flex;
+	line-height: 28px;
+	align-items: center;
+	position: relative;
+	max-width: 190px;
+}
+   
+.history-input {
+	width: 100%;
+	height: 40px;
+	line-height: 28px;
+	padding: 0 1rem;
+	padding-left: 2.5rem;
+	border: 2px solid transparent;
+	border-radius: 8px;
+	outline: none;
+	background-color: #f3f3f4;
+	color: #0d0c22;
+	transition: .3s ease;
+}
+   
+.history-input::placeholder {
+	color: #9e9ea7;
+}
+   
+.history-icon {
+	position: absolute;
+	left: 1rem;
+	fill: #9e9ea7;
+	width: 1rem;
+	height: 1rem;
+}
+
+.trash-icon{
+    fill: #9e9ea7;
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+}
+
+.edit-icon {
+    fill: #9e9ea7;
+    width: 1rem;
+    height: 1rem;
+    cursor: pointer;
+}
