@@ -2,28 +2,59 @@ document.addEventListener("DOMContentLoaded", function () {
     const input = document.getElementById("userinput");
     const enterButton = document.getElementById("enter");
     const ul = document.querySelector("ul.items-container");
+    const historicoDeCompras = document.getElementById("historicoDeCompras");
+    const itemMap = new Map();
 
     function createListItem() {
         const li = document.createElement("li");
         const editIcon = document.createElement("i");
         const deleteIcon = document.createElement("i");
         const div = document.createElement("div");
+    
+        const historyItem = document.createElement("li");
+        const currentDate = new Date();
+        const formattedDate = `${currentDate.getDate().toString().padStart(2, '0')}/${(currentDate.getMonth() + 1).toString().padStart(2, '0')}/${currentDate.getFullYear()}`;
+        historyItem.textContent = formattedDate + " - " + input.value;
+    
+        function editItem() {
+            const newText = prompt("Edit item:", li.textContent.trim());
+            if (newText !== null) {
+                li.textContent = newText.trim();
+                historyItem.textContent = formattedDate + " - " + newText.trim();
+            }
+        }
+
+        function deleteItem() {
+            li.parentElement.remove();
+            historyItem.remove();
+        }
+
+        li.addEventListener('click', function () {
+            if (historyItem.style.display === 'none') {
+                historyItem.style.display = 'block';
+            } else {
+                historyItem.style.display = 'none';
+            }
+        });
 
         li.textContent = input.value;
         editIcon.classList.add("fas", "fa-pencil-alt", "edit-icon");
+        editIcon.addEventListener('click', editItem);
+
         deleteIcon.classList.add("fas", "fa-trash-alt", "delete-icon");
+        deleteIcon.addEventListener('click', deleteItem);
 
         div.appendChild(editIcon);
         div.appendChild(deleteIcon);
 
         const liWrapper = document.createElement("div");
         liWrapper.classList.add("li-wrapper");
-
         liWrapper.appendChild(li);
         liWrapper.appendChild(div);
-
         ul.appendChild(liWrapper);
 
+        historyItem.style.display = 'none';
+        historicoDeCompras.appendChild(historyItem);
         input.value = "";
     }
 
