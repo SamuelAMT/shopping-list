@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
     const enterButton = document.getElementById("enter");
     const ul = document.querySelector("ul.items-container");
     const historicoDeCompras = document.getElementById("historicoDeCompras");
-    const itemMap = new Map();
 
     function createListItem() {
         const li = document.createElement("li");
